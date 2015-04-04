@@ -1,0 +1,17 @@
+<div class="container">
+  <h1><%= @post['title'] %></h1>
+  <div style="text-align:center">
+    <iframe width="560" height="315" src="<%= @post['video_url'] %>" frameborder="0" allowfullscreen class="video1">    	
+    </iframe>
+  </div>
+  <%= render 'buttons' %>
+  <div class="content">
+    <%= @post['message'].html_safe %>
+  </div>
+  <div class="content">
+    posted: <%= @post['date'] %></h2>
+  </div>
+  <div class="content">
+    organization: <%= @post['organization'] %>
+  </div>  
+</div>

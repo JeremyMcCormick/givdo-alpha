@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   root to: 'users#index', via: :get
   get 'auth/facebook', as: "auth_provider"
   get 'auth/facebook/callback', to: 'users#login'
-  get '/posts/:id', to: 'posts#show', as: 'post'
+
+  get '/posts/mockup', to:'posts#mockup'
+  #, as: 'post'
+  get '/posts/:id', to: 'posts#show'
+  #, as: 'post'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
