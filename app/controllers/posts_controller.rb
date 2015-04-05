@@ -1,8 +1,35 @@
 class PostsController < ApplicationController
 
-  def show
-    @post = Post.find(params['id'])
+  def index
+    @posts = Post.all
   end
+  
+  def show    
+    @post = Post.find(params['id'])    
+  end
+  
+  def new
+    @post = Post.new
+  end
+  
+  def create
+    @post = Post.create(post_params)
+    #@post['date'] = Time.now
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to @post }
+      else
+        format.html { render :action => "new" }
+      end
+    end
+  end
+  
+  private
+  
+    def post_params
+      params.require(:post).permit(:title, :message, :video_url, :organization)
+      # :date
+    end
   
   # This is a mock-up post that can be used to render the post partial.
   def mockup

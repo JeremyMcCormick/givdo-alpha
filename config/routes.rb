@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   get '/posts/mockup', to:'posts#mockup'
   #, as: 'post'
-  get '/posts/:id', to: 'posts#show'
+  #get '/posts/:id', to: 'posts#show'
+  
+  resources :posts
   #, as: 'post'
   
   # The priority is based upon order of creation: first created -> highest priority.

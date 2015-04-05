@@ -1,0 +1,25 @@
+<%= form_for @post, :html => { :id => "post-form" } do |f| %>
+ 
+  <div>
+    <%= f.label "Title" %>
+    <%= f.text_field :title %>
+  </div>
+  
+  <div>
+  	<%= f.label "Message" %>
+  	<%= f.text_area :message, :rows => "20", :cols => "80" %>
+  </div>
+ 
+  <div>
+    <%= f.label "Video URL" %>
+    <%= f.text_field :video_url %>
+  <div>
+
+  <div>
+  	<%= f.label "Organization" %>
+  	<%= f.text_field :organization %>
+  </div>
+  
+  <%= f.submit "Submit", :class => "button" %>
+
+<% end %>
