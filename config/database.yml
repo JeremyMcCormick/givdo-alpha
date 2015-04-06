@@ -11,7 +11,7 @@ default: &default
 
 development:
   adapter: mysql2
-  encoding: unicode
+  encoding: utf8
   database: alpha
   username: <%= ENV['OPENSHIFT_MYSQL_DB_USERNAME'] %>
   password: <%= ENV['OPENSHIFT_MYSQL_DB_PASSWORD'] %>
