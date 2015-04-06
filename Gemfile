@@ -6,6 +6,9 @@ ruby '2.0.0'
 # Explicit version of rack
 gem 'rack', '1.6.0'
 
+#Passenger
+gem 'passenger', '5.0.6'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 
