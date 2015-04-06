@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
 
-  root to: 'users#index', via: :get
-  get 'auth/facebook', as: "auth_provider"
-  get 'auth/facebook/callback', to: 'users#login'
-
-  get '/posts/mockup', to:'posts#mockup'
-  #, as: 'post'
-  #get '/posts/:id', to: 'posts#show'
-  
   resources :posts
+
+  root to: 'posts#index', via: :get
+  #root to: 'users#index', via: :get
+  #get 'auth/facebook', as: "auth_provider"
+  #get 'auth/facebook/callback', to: 'users#login'
+  
   #, as: 'post'
   
   # The priority is based upon order of creation: first created -> highest priority.
