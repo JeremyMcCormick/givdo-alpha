@@ -7,7 +7,7 @@ ruby '2.0.0'
 gem 'rack', '1.6.0'
 
 #Passenger
-gem 'passenger', '5.0.6'
+#gem 'passenger', '5.0.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -19,10 +19,10 @@ gem 'sqlite3', :group => [:development, :test]
 gem 'mysql', :group => [:production]
 
 # Facebook authentication
-gem 'omniauth-facebook' 
+#gem 'omniauth-facebook' 
 
 # Facebook API
-gem "koala", "~>1.11.0rc" 
+#gem "koala", "~>1.11.0rc" 
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -52,14 +52,14 @@ gem 'sdoc', '~> 0.4.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
+#group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+#  gem 'byebug'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+#  gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-end
+#  gem 'spring'
+#end
 
