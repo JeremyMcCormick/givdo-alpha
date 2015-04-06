@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Ruby 2.0
-ruby '2.0.0'
+#ruby '2.0.0'
 
 # Explicit version of rack
 gem 'rack', '1.6.0'
@@ -40,7 +40,11 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0'
+
+group :doc do
+  gem 'sdoc', '~> 0.4.0'
+end
+
 #, group: :doc
 
 # Use ActiveModel has_secure_password
