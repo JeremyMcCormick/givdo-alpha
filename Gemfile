@@ -1,10 +1,7 @@
 source 'https://rubygems.org'
 
-# Facebook authentication
-gem 'omniauth-facebook' 
-
-# Facebook API
-gem "koala", "~>1.11.0rc" 
+# Ruby 2.0
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -14,6 +11,12 @@ gem 'sqlite3', :group => [:development, :test]
 
 # Use MySQL for production
 gem 'mysql', :group => [:production]
+
+# Facebook authentication
+gem 'omniauth-facebook' 
+
+# Facebook API
+gem "koala", "~>1.11.0rc" 
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
