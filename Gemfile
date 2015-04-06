@@ -14,10 +14,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.10'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', :group => [:development, :test]
+gem 'sqlite3', :group => [:test]
 
 # Use MySQL for production
-gem 'mysql', :group => [:production]
+gem 'mysql2', :group => [:development, :production]
 
 # Facebook authentication
 #gem 'omniauth-facebook' 
