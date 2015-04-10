@@ -20,7 +20,7 @@ gem 'sqlite3', :group => [:test]
 gem 'mysql2', :group => [:development, :production]
 
 # Facebook authentication
-#gem 'omniauth-facebook' 
+gem 'omniauth-facebook' 
 
 # Facebook API
 #gem "koala", "~>1.11.0rc" 

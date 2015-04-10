@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150404070947) do
+ActiveRecord::Schema.define(version: 20150410040908) do
 
-  create_table "posts", force: :cascade do |t|
+  create_table "posts", force: true do |t|
     t.datetime "date"
     t.string   "title"
     t.string   "message"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 20150404070947) do
     t.string   "organization"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
