@@ -9,7 +9,7 @@ default: &default
   pool: 5
   timeout: 5000
 
-development:
+production:
   adapter: mysql2
   encoding: utf8
   database: alpha
@@ -25,6 +25,6 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-production:
+development:
   <<: *default
   database: db/production.sqlite3
