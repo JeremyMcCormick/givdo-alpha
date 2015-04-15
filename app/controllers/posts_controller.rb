@@ -30,6 +30,18 @@ class PostsController < ApplicationController
     @resource = @post
   end
   
+  def update
+    @post = Post.find(params[:id])
+    @post.update_attributes(post_params)
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to @post }
+      else
+        format.html { render :action => "edit" }
+      end
+    end
+  end
+  
   def destroy
     Post.find(params[:id]).destroy
     redirect_to posts_path
