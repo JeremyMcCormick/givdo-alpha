@@ -47,6 +47,13 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
   
+  def embed_url(url)
+    url.sub! 'https://www.youtube.com/watch?v=', 'https://www.youtube.com/embed/'
+    url
+  end
+  
+  helper_method :embed_url
+  
   private
   
     def post_params

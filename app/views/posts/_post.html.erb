@@ -1,7 +1,7 @@
 <div class="container">
   <h1><%= @post['title'] %></h1>
   <div style="text-align:center">
-    <iframe width="560" height="315" src="<%= @post['video_url'] %>" frameborder="0" allowfullscreen class="video1">    	
+    <iframe width="560" height="315" src="<%= embed_url(@post['video_url']) %>" frameborder="0" allowfullscreen class="video1">
     </iframe>
   </div>
   <%= render 'buttons' %>
