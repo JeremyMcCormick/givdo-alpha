@@ -48,7 +48,7 @@ class PostsController < ApplicationController
   end
   
   def embed_url(url)
-    url.sub! 'https://www.youtube.com/watch?v=', 'https://www.youtube.com/embed/'
+    url.sub! 'www.youtube.com/watch?v=', 'www.youtube.com/embed/'
     url
   end
   
