@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
   resources :posts
+  
+  resources :organizations
 
   root to: 'posts#index', via: :get
   #root to: 'users#index', via: :get

@@ -10,7 +10,6 @@ class PostsController < ApplicationController
   
   def new
     @post = Post.new
-    @resource = @post
   end
   
   def create

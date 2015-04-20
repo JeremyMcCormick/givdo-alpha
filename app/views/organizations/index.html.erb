@@ -1,0 +1,8 @@
+<div>
+  <%= link_to "add an organization", new_organization_path %>
+</div>
+<% for @organization in @organizations %>
+  <div>
+    <%= link_to @organization.name, @organization %>
+  </div>
+<% end %>

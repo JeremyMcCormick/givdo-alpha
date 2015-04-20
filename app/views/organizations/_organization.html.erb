@@ -1,0 +1,30 @@
+<div class="container">
+  <h1><%= @organization['name'] %></h1>
+  <div>
+    <%= @organization['description'] %>    
+  <div>
+    <%= @organization['address1'] %>
+  </div>
+  <div>
+  	<%= @organization['address2'] %>
+  </div>
+  <div>
+  	<%= @organization['zip'] %>
+  </div>
+  <div>
+  	<%= @organization['city'] %>
+  </div>
+  <div>
+    <%= @organization['email'] %>	
+  </div>
+  <div>
+    <%= @organization['tax_id'] %>   
+  </div>
+  <div>
+    <%= link_to "site", @organization['site_url'] %>
+  </div>
+  <div>
+    <%= link_to "donate", @organization['donation_url'] %>
+  </div>    
+</div>
+
