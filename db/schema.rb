@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420062549) do
+ActiveRecord::Schema.define(version: 20150420082911) do
 
   create_table "organizations", force: true do |t|
     t.string   "name"
@@ -31,10 +31,10 @@ ActiveRecord::Schema.define(version: 20150420062549) do
   create_table "posts", force: true do |t|
     t.datetime "date"
     t.string   "title"
-    t.string   "message"
+    t.text     "message",         limit: 255
     t.string   "video_url"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.integer  "organization_id"
   end
 
