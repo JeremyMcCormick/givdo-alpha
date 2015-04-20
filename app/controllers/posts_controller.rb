@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
   
   def show    
-    @post = Post.find(params['id'])    
+    @post = Post.find_by_id(params['id'])
   end
   
   def new
@@ -13,6 +13,7 @@ class PostsController < ApplicationController
   end
   
   def create
+    Rails.logger.debug params.inspect
     @post = Post.create(post_params)
     @post['date'] = Time.now
     respond_to do |format|
@@ -26,11 +27,10 @@ class PostsController < ApplicationController
   
   def edit
     @post = Post.find_by_id(params[:id])
-    @resource = @post
   end
   
   def update
-    @post = Post.find(params[:id])
+    @post = Post.find_by_id(params[:id])
     @post.update_attributes(post_params)
     respond_to do |format|
       if @post.save
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
   end
   
   def destroy
-    Post.find(params[:id]).destroy
+    Post.find_by_id(params[:id]).destroy
     redirect_to posts_path
   end
   
@@ -55,9 +55,9 @@ class PostsController < ApplicationController
   
   private
   
-    def post_params
-      params.require(:post).permit(:title, :message, :video_url, :organization)
-      # :date
-    end
+  def post_params
+    params.require(:post).permit(:title, :message, :video_url, :organization_id)
+    # :date
+  end
   
 end

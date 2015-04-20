@@ -13,8 +13,7 @@
     <%= f.text_field :video_url, :size => "60" %>
   <div>
   <div>
-  	<%= f.label "Organization" %>
-  	<%= f.text_field :organization, :size => "40" %>
+    <%= collection_select :post, :organization_id, Organization.all, :id, :name %>  
   </div>
   <%= f.submit "Submit", :class => "button" %>
 <% end %>

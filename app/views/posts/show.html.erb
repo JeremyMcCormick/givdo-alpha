@@ -3,5 +3,5 @@
   <%= link_to 'edit post', edit_post_path(@post['id']) %>
 </div>
 <div>
-  <%= link_to 'delete post', post_path(@post), :method => :delete %>
+  <%= link_to 'delete post', post_path(@post), :method => :delete, data: { confirm: "Are you sure?" } %>  
 </div>
