@@ -1,26 +1,97 @@
-h1{
+h1 {
   text-align: center;
+}
+
+body {
+  margin: 0px auto;
+  padding: 0;
+}
+
+.header {
+  height: 50px;
+  width: 100%;
+  background-color: #FF9933;
+  border-bottom: 1px solid #999999;
+  position: fixed;
+  top: 0px;
+}
+
+.content {
+  margin-top: 70px;
+  /*background-color: #F8F8F8;*/
+}
+
+.post-title {
+  font-size: 120%;
+}
+
+.post-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #CCCCCC;
+  width: 700px;
+}
+
+.post-message {
+  border-top: 1px solid #CCCCCC;
+  text-align: left;
+  padding-top: 10px;
+}
+
+.post-actions {
+  text-align: center;
+  border-top: 1px solid #CCCCCC;
+  padding-top: 10px;
+  font-size: 120%;
+}
+
+.post-video {
+  padding-bottom: 10px;
+}
+
+.post-buttons {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
+}
+
+.post-organization {
+  font-size: 120%;  
+}
+
+.post-date {
+  padding-bottom: 5px;
+}
+
+.logo {
+  padding-right: 25px;
 }
 
 .btn {
   width: 200px;
   height: 50px;
-  background-color:#CCCCCC;
+  background-color: #CCCCCC;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #999999;
 }
 
+/*
 p {
   text-align: center;
 }
+*/
 
 .fa {
   margin-right: 20px;
 }
 
+/*
 .header {
   background-color: #e79571;
   width: 100%;
 }
+*/
