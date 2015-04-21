@@ -6,7 +6,7 @@
     <%= @post['title'] %>
   </div>
   <div class="post-date">
-    <%= time_ago_in_words(@post['date']) %> ago</h2>
+    <span title="<%= @post['date'].strftime("%c") %>"><%= time_ago_in_words(@post['date']) %> ago</span>
   </div>
   <div class="post-message">
     <%= @post['message'].html_safe %>
