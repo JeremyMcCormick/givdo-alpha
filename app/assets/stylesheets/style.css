@@ -66,6 +66,16 @@ div.post-container {
   padding-bottom: 5px;
 }
 
+form label {
+  font-weight: bold;
+  padding-top: 10px;  
+  display: inline-block;
+}
+
+.form-button {
+  margin-top: 20px;
+}
+
 .logo {
   padding-right: 25px;
 }

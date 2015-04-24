@@ -1,44 +1,26 @@
-<%= render :partial => "shared/form_error", :locals => { :resource => @organization } %>
-<%= form_for @organization, :html => { :id => "organization-form"} do |f| %>
-  <div>
-    <%= f.label "Name" %>
-    <%= f.text_field :name %>
-  </div>
-  <div>
-    <%= f.label "Description" %>
-    <%= f.text_field :description %>
-  </div>  
-  <div>
-    <%= f.label "Address 1" %>
-    <%= f.text_field :address1 %>
-  </div>
-  <div>
-    <%= f.label "Address 2" %>
-    <%= f.text_field :address2 %>
-  </div>  
-  <div>
-    <%= f.label "Zip" %>
-    <%= f.text_field :zip %>
-  </div>
-  <div>
-    <%= f.label "City" %>
-    <%= f.text_field :city %>
-  </div>
-  <div>
-    <%= f.label "Email" %>
-    <%= f.text_field :email %>
-  </div>
-  <div>
-    <%= f.label "Tax ID" %>
-    <%= f.text_field :tax_id %>
-  </div>
-  <div>
-    <%= f.label "Site URL" %>
-    <%= f.text_field :site_url %>
-  </div>  
-  <div>
-    <%= f.label "Donation URL" %>
-    <%= f.text_field :donation_url %>
-  </div>
-  <%= f.submit "Submit", :class => "button "%>
-<% end %>
+<div class="container">
+  <%= render :partial => "shared/form_error", :locals => { :resource => @organization } %>
+  <%= form_for @organization, :html => { :id => "organization-form"} do |f| %>
+    <%= f.label "Name" %><br/>
+    <%= f.text_field :name, :size => "50" %><br/>
+    <%= f.label "Description" %><br/>
+    <%= f.text_field :description, :size => "100" %><br/>
+    <%= f.label "Address 1" %><br/>
+    <%= f.text_field :address1, :size => "50" %><br/>
+    <%= f.label "Address 2" %><br/>
+    <%= f.text_field :address2, :size => "50" %><br/>
+    <%= f.label "Zip" %><br/>
+    <%= f.text_field :zip, :size => "50" %><br/>
+    <%= f.label "City" %><br/>
+    <%= f.text_field :city, :size => "50" %><br/>
+    <%= f.label "Email" %><br/>
+    <%= f.text_field :email, :size => "50" %><br/>
+    <%= f.label "Tax ID" %><br/>
+    <%= f.text_field :tax_id, :size => "20" %><br/>
+    <%= f.label "Site URL" %><br/>
+    <%= f.text_field :site_url, :size => "50" %><br/>
+    <%= f.label "Donation URL" %><br/>
+    <%= f.text_field :donation_url, :size => "50" %><br/>
+    <%= f.submit "Submit", :class => "btn-primary btn-lg form-button" %>
+  <% end %>
+</div>

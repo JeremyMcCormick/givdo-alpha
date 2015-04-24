@@ -1,19 +1,14 @@
-<%= render :partial => "shared/form_error", :locals => { :resource => @post } %>
-<%= form_for @post, :html => { :id => "post-form" } do |f| %>
-  <div>
-    <%= f.label "Title" %>
-    <%= f.text_field :title, :size => "60" %>
-  </div>
-  <div>
-  	<%= f.label "Message" %>
-  	<%= f.text_area :message, :rows => "20", :cols => "80" %>
-  </div>
-  <div>
-    <%= f.label "Video URL" %>
-    <%= f.text_field :video_url, :size => "60" %>
-  <div>
-  <div>
-    <%= collection_select :post, :organization_id, Organization.all, :id, :name %>  
-  </div>
-  <%= f.submit "Submit", :class => "button" %>
-<% end %>
+<div class="container">
+  <%= render :partial => "shared/form_error", :locals => { :resource => @post } %>
+  <%= form_for @post, :html => { :id => "post-form" } do |f| %>
+    <%= f.label "Title" %><br/>
+    <%= f.text_field :title, :size => "60" %><br/>
+  	<%= f.label "Message" %><br/>
+  	<%= f.text_area :message, :rows => "20", :cols => "80", :class => "form-field" %><br/>
+    <%= f.label "Video URL" %><br/>
+    <%= f.text_field :video_url, :size => "60" %><br/>
+    <%= f.label "Organization" %><br/>
+    <%= collection_select :post, :organization_id, Organization.all, :id, :name %><br/>  
+    <%= f.submit "Submit", :class => "btn-primary btn-lg form-button" %>
+  <% end %>
+</div>
