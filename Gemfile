@@ -17,7 +17,7 @@ gem 'rails', '4.1.10'
 gem 'sqlite3', :group => [:test]
 
 # Use MySQL for production
-gem 'mysql2', :group => [:development, :production]
+gem 'mysql2', :group => [:production]
 
 # Facebook authentication
 gem 'omniauth-facebook' 
