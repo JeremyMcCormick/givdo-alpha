@@ -27,4 +27,8 @@
     <%= link_to "donate", @organization['donation_url'] %>
   </div>    
 </div>
-
+<div>
+  <%= link_to 'edit', edit_organization_path(@organization['id']) %> 
+  &nbsp;
+  <%= link_to 'delete', organization_path(@organization), :method => :delete, data: { confirm: "Are you sure?" } %>  
+</div>
