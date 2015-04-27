@@ -40,6 +40,7 @@ GEM
     execjs (2.4.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    going_postal (0.1.5)
     hashie (3.4.1)
     hike (1.2.3)
     i18n (0.7.0)
@@ -132,6 +133,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.1.0)
+  going_postal
   jbuilder (~> 2.0)
   jquery-rails
   mysql2

@@ -46,6 +46,8 @@ group :doc do
   gem 'sdoc', '~> 0.4.0'
 end
 
+gem 'going_postal'
+
 #, group: :doc
 
 # Use ActiveModel has_secure_password
