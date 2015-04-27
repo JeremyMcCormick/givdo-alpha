@@ -24,5 +24,8 @@ module GivdoAlpha
     #config.active_record.raise_in_transactional_callbacks = true
         
     #Koala.config.api_version = 'v2.0'
+    
+    # add custom validators path
+    config.autoload_paths += %W["#{config.root}/app/validators/"]
   end
 end
