@@ -5,11 +5,14 @@ Rails.application.routes.draw do
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
-  resources :posts
-  
+  resources :posts  
   resources :organizations
+  resources :donations
+  
+  get 'organizations/:id/donate', to: 'organizations#donate'
 
   root to: 'posts#index', via: :get
+   
   #root to: 'users#index', via: :get
   #get 'auth/facebook', as: "auth_provider"
   #get 'auth/facebook/callback', to: 'users#login'

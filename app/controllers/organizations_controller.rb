@@ -21,7 +21,7 @@ class OrganizationsController < ApplicationController
   end
   
   def show
-    @organization = Organization.find(params['id'])    
+    @organization = Organization.find(params[:id])
   end
   
   def edit
@@ -43,6 +43,12 @@ class OrganizationsController < ApplicationController
   def destroy 
     Organization.find(params[:id]).destroy
     redirect_to organizations_path
+  end
+  
+  def donate
+    @organization = Organization.find_by_id(params[:id])
+    @donation = Donation.new
+    @donation.organization = @organization
   end
 
   private  
