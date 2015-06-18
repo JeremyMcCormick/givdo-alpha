@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  # landing page
+  get 'landing', to: 'landing#view'
+
   # Facebook Omniauth routes
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')

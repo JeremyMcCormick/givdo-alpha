@@ -1,0 +1,30 @@
+.landing-background {
+  background-image: url(image-path('landing.jpg'));    
+  display: block;  
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+/* 
+  top: 0px; 
+  left: 0px; 
+  bottom: 0px; 
+  right: 0px;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  height:auto !important; 
+  height: 100%; 
+  overflow: hidden !important;
+  display: block;
+  position: relative;
+  */
+}
+
+/*
+.landing-text {
+  color: white;
+}
+*/
